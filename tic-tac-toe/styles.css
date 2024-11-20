@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#1A1A1D,#3B1C32,#6A1E55);
+}
+
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    background: #A64D79;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.game-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    margin: 0 auto 20px;
+    width: 300px;
+    height: 300px;
+    background: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border: 1px solid #ddd;
+    font-size: 3rem; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.3s;
+}
+
+.cell:hover {
+    background: #0f0f10;
+    transform: scale(1.1); 
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+
+.x-style {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 5px #FF0000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.o-style {
+    color: #ffffff; /* Green color for O */
+    text-shadow: 0 2px 5px #00b3ff;
+    font-family: 'Georgia', serif;
+}
+
+
+.status {
+    margin-top: 10px;
+}
+
+#game-status {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #1A1A1D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background: #4c2441;
+}
+
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #ECDFCC;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+#scoreboard span {
+    font-weight: bold;
+    color: #000;
+}
